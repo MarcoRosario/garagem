@@ -13,3 +13,30 @@ class Categoria(models.Model):
 
     def __str__(self):
         return self.descricao.upper()
+
+
+
+class Acessório(models.Model):
+    descricao = models.CharField(max_length=100)
+  
+
+    def __str__(self):
+        return self.descricao
+
+class Cor(models.Model):
+    descricao = models.CharField(max_length=100)
+  
+
+    def __str__(self):
+        return self.descricao
+
+class Veiculo(models.Model):
+    categoria = models.ForeignKey(
+        Categoria, on_delete=models.PROTECT, related_name="Veiculo"
+)   
+    cor = models.ForeignKey(
+        Cor, on_delete=models.PROTECT, related_name="Veiculo"
+)   
+    marca = models.ForeignKey(
+        Marca, on_delete=models.PROTECT, related_name="Veiculo"
+)   
