@@ -2,6 +2,6 @@
 # Please do not edit it manually.
 
 asgiref==3.7.2
-django==4.2.4
+django==4.2.5
 sqlparse==0.4.4
 typing-extensions==4.7.1
